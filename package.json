@@ -1,0 +1,27 @@
+{
+  "name": "keep-app-alive",
+  "version": "0.0.1",
+  "description": "Forcibly keep your instances awake",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClintTheEngineer/keep-app-alive.git"
+  },
+  "keywords": [
+    "keep",
+    "servers",
+    "awake"
+  ],
+  "author": "Clint Alexander",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ClintTheEngineer/keep-app-alive/issues"
+  },
+  "homepage": "https://github.com/ClintTheEngineer/keep-app-alive#readme",
+  "dependencies": {
+    "https": "^1.0.0"
+  }
+}
