@@ -5,7 +5,7 @@ When utilizing a cloud platform that spins down servers due to inactivity, utili
 `npm i keep-app-alive`
 
 # How to use
-`const keepAlive = require('keep-app-alive');`
+`const keepAlive = require('keep-app-alive');`<br>
 `const pingTimer = 50000(time in ms)`
 
 `keepAlive('https://your-server-url.com', pingTimer);`
