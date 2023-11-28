@@ -1,6 +1,6 @@
 {
   "name": "keep-app-alive",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Forcibly keep your instances awake",
   "main": "index.js",
   "scripts": {
