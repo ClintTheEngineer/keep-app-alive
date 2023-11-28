@@ -1,5 +1,10 @@
 declare module 'render-wake' {
-    function keepAlive(renderAppUrl?: string, pingInterval?: number): void;
+    interface KeepAliveOptions {
+      renderAppUrl?: string;
+      pingInterval?: number;
+    }
+  
+    function keepAlive(options?: KeepAliveOptions): void;
   
     export = keepAlive;
   }

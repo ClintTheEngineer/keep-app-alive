@@ -1,19 +1,25 @@
-// index.js
-
 const https = require('https');
 
-function keepAlive(renderAppUrl = 'https://example.org', pingInterval = 60000) {
+function keepAlive(config = {}) {
+  const { renderAppUrl: defaultRenderAppUrl = 'https://exampleurl.com', pingInterval: defaultPingInterval = 60000 } = config;
+  let { renderAppUrl = defaultRenderAppUrl, pingInterval = defaultPingInterval } = config;
+
   console.log('Pinging the server...');
   https.get(renderAppUrl, (res) => {
-    console.log(`Server response: ${res.statusCode}`);
+    return res.statusCode;
   });
+  
+  // Set up the interval to keep pinging the server
+  setInterval(() => {
+    console.log('Pinging the server...');
+    https.get(renderAppUrl, (res) => {
+      return res.statusCode;
+    });
+  }, pingInterval);
 }
 
 // Ping the server initially
 keepAlive();
-
-// Set up the interval to keep pinging the server
-setInterval(() => keepAlive(), pingInterval);
 
 module.exports = keepAlive;
 
